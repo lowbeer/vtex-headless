@@ -1,6 +1,6 @@
 import React from 'react'
 
-function PDP(props) {
+function ProductPage(props) {
 
     const url = '/api/catalog_system/pub/products/search/samsung-j7/p'
 
@@ -27,4 +27,4 @@ function PDP(props) {
 
 }
 
-export default PDP;
+export default ProductPage;
