@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.9.11",
     "@material-ui/icons": "^4.9.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -40,5 +41,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://thomas.myvtex.com"
+  "proxy": "https://thomas.vtexcommercestable.com.br"
 }

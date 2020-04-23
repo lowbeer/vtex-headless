@@ -1,34 +1,26 @@
 import React from 'react'
 
-function PDP(props){
+function PDP(props) {
 
-    const url = `https://thomas.myvtex.com/api/catalog_system/pub/products/search/samsung-j7/p`
- 
-    console.log(url)
+    const url = '/api/catalog_system/pub/products/search/samsung-j7/p'
+
+    fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    }).then((response) => {
+        return response.json()
+    })
+        .then((data) => {
+            alert(data.length > 0 ? data[0].productName : 'none')
+        });
 
 
- fetch(url, {
-  method: 'GET',
-  headers: {
-    'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': 'https://localhost:3000'
-  }
-}).then((response) => {
-    return response;
-  })
-  .then((data) => {
-    console.log(data);
-  });
-
-  
-
-    return(
+    return (
         <div>
 
-PDP
-    productLink={props.match.params.slug}
-
-
+            PDP
 
         </div>
     )
