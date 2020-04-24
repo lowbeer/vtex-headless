@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import Header from './components/Header';
 import Home from './components/Home';
-import Search from './components/Search';
+import SearchResult from './components/SearchResult';
 import ProductPage from './components/ProductPage';
 import Cart from './components/Cart';
 import './App.css';
@@ -21,7 +21,7 @@ function App() {
         <BrowserRouter>
                 <Switch>
                     <Route path="/" exact={true} component={Home} />
-                    <Route path="/search" component={Search} />
+                    <Route path="/:department/:category/search" component={SearchResult} />
                     <Route path="/:slug/p" component={ProductPage} />
                     <Route path="/cart" component={Cart} />
                 </Switch>

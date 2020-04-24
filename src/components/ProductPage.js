@@ -1,26 +1,20 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import {productBySlug} from '../helpers/productBySlug'
+
 
 function ProductPage(props) {
-
-    const url = '/api/catalog_system/pub/products/search/samsung-j7/p'
-
-    fetch(url, {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-        }
-    }).then((response) => {
-        return response.json()
-    })
-        .then((data) => {
-            alert(data.length > 0 ? data[0].productName : 'none')
-        });
+    let [product,setProduct] = useState(null)
+    useEffect(()=>{
+        productBySlug(props.match.params.slug).then(setProduct)
+    },[props.match.params.slug])
 
 
     return (
         <div>
 
             PDP
+        
+            {product ? product.productName : 'loading' }
 
         </div>
     )
