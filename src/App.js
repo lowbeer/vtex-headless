@@ -21,7 +21,9 @@ function App() {
         <BrowserRouter>
                 <Switch>
                     <Route path="/" exact={true} component={Home} />
-                    <Route path="/:department/:category/search" component={SearchResult} />
+                    <Route path="/:department/search" component={SearchResult} />
+                    <Route path="/:department/:category1/search" component={SearchResult} />
+                    <Route path="/:department/:category1/:category:2/search" component={SearchResult} />
                     <Route path="/:slug/p" component={ProductPage} />
                     <Route path="/cart" component={Cart} />
                 </Switch>

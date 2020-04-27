@@ -3,10 +3,13 @@ import {searchByCatId} from '../helpers/searchByCat'
 
 
 function SearchPage(props) {
-    let [searchResult,setSearchResult] = useState(null)
+    let [searchResult, setSearchResult] = useState(null)
     useEffect(()=>{
-        searchByCatId(props.match.params.department,props.match.params.category).then(setSearchResult)
-    },[props.match.params.department,props.match.params.category])
+        const params = props.match.params
+        searchByCatId(params.department, params.category1, params.category2).then((result) => {
+            setSearchResult(result)
+        })
+    })
 
     if (!searchResult){
         return <div> NOT FOUND </div>
@@ -28,3 +31,5 @@ function SearchPage(props) {
 }
 
 export default SearchPage;
+
+// /electronics/mobile/
