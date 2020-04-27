@@ -9,7 +9,7 @@ function SearchPage(props) {
         searchByCatId(params.department, params.category1, params.category2).then((result) => {
             setSearchResult(result)
         })
-    })
+    },[props.match.params.department,props.match.params.category1,props.match.params.category2])
 
     if (!searchResult){
         return <div> NOT FOUND </div>

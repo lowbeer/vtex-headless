@@ -15,10 +15,11 @@ function App() {
     <div className="App">
 
 
-        <Header></Header>
+        
 
        
         <BrowserRouter>
+          <Header></Header>
                 <Switch>
                     <Route path="/" exact={true} component={Home} />
                     <Route path="/:department/search" component={SearchResult} />
