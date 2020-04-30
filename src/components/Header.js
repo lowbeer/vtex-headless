@@ -83,8 +83,7 @@ export default function SearchAppBar() {
           </IconButton>
 
           <Typography className={classes.title} variant="h6" noWrap>
-            Material-UI
-          
+            VTEX HEADLESS APP
           </Typography>
           <Menu>
             

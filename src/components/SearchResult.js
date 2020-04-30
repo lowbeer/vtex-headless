@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from "react-router-dom"
 import {searchByCatId} from '../helpers/searchByCat'
 
 
@@ -16,12 +17,12 @@ function SearchPage(props) {
     }
     return (
         <div>
-
             Search Result
              <ul> 
                 {searchResult.map(product => {
                     return <li>
-                        {product.productName}
+                        <Link to={`/${product.linkText}/p`}>{product.productName}</Link> 
+                        
                     </li>
                 })}
             </ul>

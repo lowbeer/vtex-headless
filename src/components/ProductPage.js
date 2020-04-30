@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from "react-router-dom"
 import {productBySlug} from '../helpers/productBySlug'
 
 
@@ -20,5 +21,4 @@ function ProductPage(props) {
     )
 
 }
-
 export default ProductPage;
