@@ -10,7 +10,7 @@ export function searchByCatId(department,category1,category2){
     myHeaders.append("Content-Type", "application/json");
     var graphql = JSON.stringify({
       query: "\n      query ProductSearch($query: String, $map: String){\n           productSearch(query: $query, map:$map) @context(sender: \"vtex.search-graphql@0.x\") {\n               products {\n                   productName,\n                   linkText\n                   \n                }\n            }\n        }\n      \n         \n         \n      \n  \n    \n",
-      variables: {"query":"eletronicos/mobile","map":"c,c"}
+      variables: {"query": query, "map":"c,c"}
     })
     var requestOptions = {
       method: 'POST',
